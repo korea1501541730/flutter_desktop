@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop/utils/log_util.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
+  _initApp();
   runApp(const MyApp());
+}
+///init utils
+_initApp(){
+  Log().init();
+  _initLoading();
+}
+///initLoading
+_initLoading() {
+  EasyLoading.instance.userInteractions = false;
 }
 
 class MyApp extends StatelessWidget {
