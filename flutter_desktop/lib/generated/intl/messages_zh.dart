@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "add": MessageLookupByLibrary.simpleMessage("添加"),
         "close": MessageLookupByLibrary.simpleMessage("关闭"),
         "home": MessageLookupByLibrary.simpleMessage("首页"),
+        "mine": MessageLookupByLibrary.simpleMessage("我的"),
         "search": MessageLookupByLibrary.simpleMessage("搜索"),
         "setting": MessageLookupByLibrary.simpleMessage("设置")
       };

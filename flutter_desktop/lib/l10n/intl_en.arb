@@ -1,7 +1,8 @@
 {
   "add": "Add",
   "home": "Home",
+  "mine": "Mine",
   "close": "Close",
   "search": "Search",
-  "setting": "Setting"
+  "setting":"Setting"
 }

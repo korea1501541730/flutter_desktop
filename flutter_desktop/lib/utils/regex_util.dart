@@ -1,6 +1,6 @@
 
 
-class RegexUtils {
+class RegexUtil {
   /// Regex of simple mobile.
   static const String regexMobileSimple = "^[1]\\d{10}\$";
 

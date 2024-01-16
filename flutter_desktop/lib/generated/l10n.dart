@@ -70,6 +70,16 @@ class S {
     );
   }
 
+  /// `Mine`
+  String get mine {
+    return Intl.message(
+      'Mine',
+      name: 'mine',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Close`
   String get close {
     return Intl.message(

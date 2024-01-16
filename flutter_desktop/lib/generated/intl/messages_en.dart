@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "add": MessageLookupByLibrary.simpleMessage("Add"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "mine": MessageLookupByLibrary.simpleMessage("Mine"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "setting": MessageLookupByLibrary.simpleMessage("Setting")
       };
