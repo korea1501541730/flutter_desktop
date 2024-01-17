@@ -4,5 +4,8 @@
   "mine": "Mine",
   "close": "Close",
   "search": "Search",
-  "setting":"Setting"
+  "setting":"Setting",
+  "language":"Language",
+  "theme":"Theme",
+  "about":"About"
 }

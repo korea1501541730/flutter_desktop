@@ -13,6 +13,7 @@ class AppColors {
   static Color get red => const Color(0xFFF44336);
   static Color get orange => const Color(0xFFE55F2D);
   static Color get gray => const Color(0xFF96A0AF);
+  static Color get black => const Color(0xFF000000);
   static Color get title333 => const Color(0xFF333333);
   static Color get text204 => const Color(0xFFCCCCCC);
   static Color get text666 => const Color(0xFF666666);

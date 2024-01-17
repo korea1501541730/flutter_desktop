@@ -8,5 +8,4 @@ class AppStrings {
   static const String followSystem = "FollowSystem";
   static const String chinese = "Chinese";
   static const String english = "English";
-
 }

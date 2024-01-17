@@ -4,5 +4,8 @@
   "mine": "我的",
   "close": "关闭",
   "search": "搜索",
-  "setting":"设置"
+  "setting":"设置",
+  "language":"语言",
+  "theme":"主题",
+  "about":"关于我们"
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop/feature/main_page.dart';
+import 'package:flutter_desktop/routers/app_routes.dart';
 import 'package:flutter_desktop/utils/language_util.dart';
 import 'package:flutter_desktop/utils/log_util.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -40,6 +40,8 @@ class MyApp extends StatelessWidget {
         Locale('en', 'US'), // English, no country code
         Locale('zh', 'CN'), // Spanish, no country code
       ],
+      getPages: AppRoutes.appRoutes(),
+      initialRoute: AppRoutes.mainPage,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -59,7 +61,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: const MainPage(),
     );
   }
 }
