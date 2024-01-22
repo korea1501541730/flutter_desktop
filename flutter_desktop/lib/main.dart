@@ -36,10 +36,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale:LanguageUtil.getCurrentLocale(),
-      supportedLocales: const[
-        Locale('en', 'US'), // English, no country code
-        Locale('zh', 'CN'), // Spanish, no country code
-      ],
+      supportedLocales: S.delegate.supportedLocales,
       getPages: AppRoutes.appRoutes(),
       initialRoute: AppRoutes.mainPage,
       theme: ThemeData(

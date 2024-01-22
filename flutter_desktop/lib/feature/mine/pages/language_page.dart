@@ -1,29 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop/feature/mine/pages/controllers/language_controller.dart';
+import 'package:flutter_desktop/feature/mine/pages/widgets/language_card_view.dart';
+import 'package:get/get.dart';
 
-class LanguagePage extends StatefulWidget {
+import '../../../generated/l10n.dart';
+import '../../../routers/app_routes.dart';
+
+class LanguagePage extends GetView<LanguageController> {
   const LanguagePage({super.key});
 
   @override
-  State<LanguagePage> createState() => _LanguagePageState();
-}
-
-class _LanguagePageState extends State<LanguagePage> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    // TODO: implement build
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(S.of(context).mine),
+        ),
+        body: Center(
+            child: Obx(() => ListView.builder(
+                itemCount: controller.dataSources.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return GestureDetector(
+                    onTap: () {
+                      // Handle item click here
+                      controller.didSelectLanguage(index);
+                    },
+                    child: LanguageCardView(model: controller.dataSources[index]),
+                  );
+                })
+            )
+        )
+    );
   }
+  
 }

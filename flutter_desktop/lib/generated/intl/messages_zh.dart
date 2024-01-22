@@ -24,7 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("关于我们"),
         "add": MessageLookupByLibrary.simpleMessage("添加"),
+        "chinese": MessageLookupByLibrary.simpleMessage("简体中文"),
         "close": MessageLookupByLibrary.simpleMessage("关闭"),
+        "english": MessageLookupByLibrary.simpleMessage("英文"),
+        "followSystem": MessageLookupByLibrary.simpleMessage("跟随系统"),
         "home": MessageLookupByLibrary.simpleMessage("首页"),
         "language": MessageLookupByLibrary.simpleMessage("语言"),
         "mine": MessageLookupByLibrary.simpleMessage("我的"),

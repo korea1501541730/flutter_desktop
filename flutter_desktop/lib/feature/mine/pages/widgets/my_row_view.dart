@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop/feature/mine/pages/models/my_model.dart';
 
 import '../../../../constants/app_colors.dart';
+import '../../../../generated/l10n.dart';
 
 class MineRowView extends StatelessWidget {
   MineModel model;
@@ -11,17 +12,17 @@ class MineRowView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 44,
-      child: _buildRow(model),
+      height: 56,
+      child: _buildRow(model,context),
     );
   }
 
-  Row _buildRow(MineModel model) {
+  Row _buildRow(MineModel model,BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20.0),
+          padding: const EdgeInsets.only(left: 10.0),
           child: Image(
           image: AssetImage(model.imagePath),
           width: 24,
@@ -31,7 +32,7 @@ class MineRowView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Text(
-            model.title,
+            _getTitle(model.title, context),
             textAlign: TextAlign.left,
             style: TextStyle(
               color: AppColors.black,
@@ -46,7 +47,7 @@ class MineRowView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(right: 20.0),
+                  padding: EdgeInsets.only(right: 10.0),
                   child: Image(
                     image: AssetImage('assets/images/detailarrow.png'),
                     width: 20,
@@ -66,5 +67,14 @@ class MineRowView extends StatelessWidget {
             ))
       ],
     );
+  }
+  String _getTitle(String title,BuildContext context){
+    if(title=='language'){
+      return S.of(context).language;
+    }else if(title=='theme'){
+      return S.of(context).theme;
+    }else{
+      return S.of(context).about;
+    }
   }
 }

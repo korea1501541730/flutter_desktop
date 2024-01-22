@@ -16,14 +16,14 @@ class MineController extends GetxController {
   @override void onClose() {
     // TODO: implement onClose
     super.onClose();
-    Log().t('','ChangeIpController onClose');
+    Log().t('','MineController onClose');
   }
 
   ///
   reloadTypes() {
-    dataSources.add(MineModel(title: S.of(Get.context!).language,imagePath: 'assets/images/account_language.png'));
-    dataSources.add(MineModel(title: S.of(Get.context!).theme,imagePath: 'assets/images/account_help.png'));
-    dataSources.add(MineModel(title: S.of(Get.context!).about,imagePath: 'assets/images/account_about.png'));
+    dataSources.add(MineModel(title: 'language',imagePath: 'assets/images/account_language.png'));
+    dataSources.add(MineModel(title: 'theme',imagePath: 'assets/images/account_help.png'));
+    dataSources.add(MineModel(title: 'about',imagePath: 'assets/images/account_about.png'));
   }
 
 

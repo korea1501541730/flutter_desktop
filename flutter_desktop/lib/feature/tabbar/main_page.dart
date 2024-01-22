@@ -6,7 +6,8 @@ import 'package:get/get.dart';
 import '../../constants/app_colors.dart';
 import '../../generated/l10n.dart';
 
-class MainPage extends GetView<MainPageController> {
+class MainPage extends GetView<MainPageController>
+ {
   const MainPage({super.key});
 
   @override

@@ -20,9 +20,7 @@ class HomeController extends GetxController {
 
   ///
   reloadTypes() {
-    dataSources.add(HomeModel(title: S.of(Get.context!).language,text: ''));
-    dataSources.add(HomeModel(title: S.of(Get.context!).theme));
-    dataSources.add(HomeModel(title: S.of(Get.context!).about));
+
   }
 
 

@@ -1,6 +1,7 @@
 
 import 'dart:ui';
 
+import 'package:flutter_desktop/generated/l10n.dart';
 import 'package:flutter_desktop/utils/storage_util.dart';
 import '../constants/app_strings.dart';
 
@@ -13,14 +14,14 @@ class LanguageUtil{
     StorageUtil.putString(AppStrings.language, language);
   }
   ///获取语言
-  static getAppLanguage(){
+  static String? getAppLanguage(){
     return StorageUtil.getString(AppStrings.language);
   }
   ///获取当前的语言
   static Locale getCurrentLocale(){
     var locale = const Locale('en', 'US');
-    String languageConfig = getAppLanguage();
-    if(languageConfig.isEmpty||languageConfig == AppStrings.followSystem){
+    String? languageConfig = getAppLanguage();
+    if(languageConfig!.isEmpty||languageConfig == AppStrings.followSystem){
       String systemLocale = window.locale.languageCode;
       String? countryCode = window.locale.countryCode;
       if (systemLocale == 'zh' || systemLocale == 'Hant' || countryCode == 'CN') {
@@ -40,6 +41,7 @@ class LanguageUtil{
       print('当前语言不是中文');
       locale = const Locale('en', 'US');
     }
+    S.load(locale);
     return locale;
   }
 }

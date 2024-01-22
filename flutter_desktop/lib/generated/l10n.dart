@@ -139,6 +139,36 @@ class S {
       args: [],
     );
   }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chinese`
+  String get chinese {
+    return Intl.message(
+      'Chinese',
+      name: 'chinese',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Follow System`
+  String get followSystem {
+    return Intl.message(
+      'Follow System',
+      name: 'followSystem',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
