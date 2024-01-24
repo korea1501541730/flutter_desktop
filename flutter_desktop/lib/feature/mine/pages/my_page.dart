@@ -4,7 +4,6 @@ import 'package:flutter_desktop/feature/mine/pages/widgets/my_row_view.dart';
 import 'package:flutter_desktop/routers/app_routes.dart';
 import 'package:get/get.dart';
 
-import '../../../generated/l10n.dart';
 
 class MinePage extends GetView<MineController> {
   const MinePage({super.key});
@@ -14,7 +13,7 @@ class MinePage extends GetView<MineController> {
     // TODO: implement build
     return Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).mine),
+          title: Text('mine'.tr),
         ),
         body: Center(
             child: Obx(() => ListView.builder(

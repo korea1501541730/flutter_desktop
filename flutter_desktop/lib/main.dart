@@ -1,20 +1,24 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop/routers/app_routes.dart';
 import 'package:flutter_desktop/utils/language_util.dart';
 import 'package:flutter_desktop/utils/log_util.dart';
+import 'package:flutter_desktop/utils/storage_util.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'generated/l10n.dart';
+import 'localizable/translations.dart';
 
 void main() {
   _initApp();
   runApp(const MyApp());
+  StorageUtil.getInstance();
 }
 ///init utils
 _initApp(){
   Log().init();
   _initLoading();
+  // StorageUtil.getInstance();//单利初始化
 }
 ///initLoading
 _initLoading() {
@@ -30,13 +34,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       localizationsDelegates: const [
-        S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      translations: IntlTranslation(),
       locale:LanguageUtil.getCurrentLocale(),
-      supportedLocales: S.delegate.supportedLocales,
+      supportedLocales: IntlTranslation.supportedLocales,
       getPages: AppRoutes.appRoutes(),
       initialRoute: AppRoutes.mainPage,
       theme: ThemeData(

@@ -11,17 +11,12 @@ import 'package:synchronized/synchronized.dart';
 class StorageUtil {
   static StorageUtil? _singleton;
   static SharedPreferences? _prefs;
-  static final Lock _lock = Lock();
 
   static Future<StorageUtil?> getInstance() async {
     if (_singleton == null) {
-      await _lock.synchronized(() async {
-        if (_singleton == null) {
-          var singleton = StorageUtil._();
-          await singleton._init();
-          _singleton = singleton;
-        }
-      });
+      var singleton = StorageUtil._();
+      await singleton._init();
+      _singleton = singleton;
     }
     return _singleton;
   }

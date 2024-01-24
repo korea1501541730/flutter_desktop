@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop/feature/mine/pages/models/language_model.dart';
+import 'package:get/get.dart';
 import '../../../../constants/app_colors.dart';
 
 class LanguageCardView extends StatelessWidget {
@@ -32,7 +33,7 @@ class LanguageCardView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 20.0),
           child: Text(
-            model.title,
+            model.title.tr,
             textAlign: TextAlign.left,
             style: TextStyle(
               color: AppColors.black,

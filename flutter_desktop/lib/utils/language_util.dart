@@ -1,7 +1,5 @@
 
 import 'dart:ui';
-
-import 'package:flutter_desktop/generated/l10n.dart';
 import 'package:flutter_desktop/utils/storage_util.dart';
 import '../constants/app_strings.dart';
 
@@ -38,10 +36,9 @@ class LanguageUtil{
       locale = const Locale('zh', 'CN');
     }
     else if(languageConfig == AppStrings.english){
-      print('当前语言不是中文');
+      print('当前语言是英文');
       locale = const Locale('en', 'US');
     }
-    S.load(locale);
     return locale;
   }
 }

@@ -1,4 +1,4 @@
-{
+final Map<String, String> intlZhCn = {
   "add": "添加",
   "home": "首页",
   "mine": "我的",
@@ -11,4 +11,4 @@
   "english":"英文",
   "chinese":"简体中文",
   "followSystem":"跟随系统"
-}
+};

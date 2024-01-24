@@ -1,4 +1,4 @@
-{
+final Map<String, String> intlEnUs = {
   "add": "Add",
   "home": "Home",
   "mine": "Mine",
@@ -11,4 +11,4 @@
   "english":"English",
   "chinese":"Chinese",
   "followSystem":"Follow System"
-}
+};

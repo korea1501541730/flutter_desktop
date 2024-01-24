@@ -3,9 +3,6 @@ import 'package:flutter_desktop/feature/mine/pages/controllers/language_controll
 import 'package:flutter_desktop/feature/mine/pages/widgets/language_card_view.dart';
 import 'package:get/get.dart';
 
-import '../../../generated/l10n.dart';
-import '../../../routers/app_routes.dart';
-
 class LanguagePage extends GetView<LanguageController> {
   const LanguagePage({super.key});
 
@@ -14,7 +11,7 @@ class LanguagePage extends GetView<LanguageController> {
     // TODO: implement build
     return Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).mine),
+          title: Text('mine'.tr),
         ),
         body: Center(
             child: Obx(() => ListView.builder(

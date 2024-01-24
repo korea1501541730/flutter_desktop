@@ -4,9 +4,7 @@ import 'package:get/get.dart';
 import 'dart:ui';
 
 import '../../../../constants/app_strings.dart';
-import '../../../../generated/l10n.dart';
 import '../../../../utils/log_util.dart';
-import 'package:intl/intl.dart';
 
 class LanguageController extends GetxController {
   late final RxList dataSources = [].obs;
@@ -28,9 +26,9 @@ class LanguageController extends GetxController {
     if(languageConfig!.isEmpty||languageConfig == AppStrings.followSystem){
       isFollowSystem = true;
     }
-    dataSources.add(LanguageModel(title: S.of(Get.context!).followSystem, select: isFollowSystem,text: ''));
-    dataSources.add(LanguageModel(title: S.of(Get.context!).chinese, select: languageConfig == AppStrings.chinese,text: ''));
-    dataSources.add(LanguageModel(title: S.of(Get.context!).english, select: languageConfig == AppStrings.english,text: ''));
+    dataSources.add(LanguageModel(title: 'followSystem', select: isFollowSystem,text: ''));
+    dataSources.add(LanguageModel(title: 'chinese', select: languageConfig == AppStrings.chinese,text: ''));
+    dataSources.add(LanguageModel(title: 'english', select: languageConfig == AppStrings.english,text: ''));
   }
   ///选择语言
   didSelectLanguage(int index){
@@ -50,7 +48,7 @@ class LanguageController extends GetxController {
         break;
     }
     LanguageUtil.setAppLanguage(languageConfig);
-    S.load(locale);
+    Get.updateLocale(locale);
     _updateDataSources(languageConfig);
   }
   ///更熟数据

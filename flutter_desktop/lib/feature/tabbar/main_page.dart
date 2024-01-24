@@ -4,7 +4,6 @@ import 'package:flutter_desktop/feature/tabbar/mainpage_controller.dart';
 import 'package:get/get.dart';
 
 import '../../constants/app_colors.dart';
-import '../../generated/l10n.dart';
 
 class MainPage extends GetView<MainPageController>
  {
@@ -33,7 +32,7 @@ class MainPage extends GetView<MainPageController>
   List<BottomNavigationBarItem> _buildBarItems(){
     return [
       BottomNavigationBarItem(
-        label:S.of(Get.context!).home,
+        label:'home'.tr,
         icon: Image.asset(
           'assets/images/home.png',
           width: 24,
@@ -46,7 +45,7 @@ class MainPage extends GetView<MainPageController>
         ),
       ),
       BottomNavigationBarItem(
-        label:S.of(Get.context!).mine,
+        label:'mine'.tr,
         icon: Image.asset(
           "assets/images/me.png",
           width: 24,

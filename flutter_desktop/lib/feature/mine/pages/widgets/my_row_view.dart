@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop/feature/mine/pages/models/my_model.dart';
+import 'package:get/get.dart';
 
 import '../../../../constants/app_colors.dart';
-import '../../../../generated/l10n.dart';
 
 class MineRowView extends StatelessWidget {
   MineModel model;
@@ -32,7 +32,7 @@ class MineRowView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Text(
-            _getTitle(model.title, context),
+            model.title.tr,
             textAlign: TextAlign.left,
             style: TextStyle(
               color: AppColors.black,
@@ -67,14 +67,5 @@ class MineRowView extends StatelessWidget {
             ))
       ],
     );
-  }
-  String _getTitle(String title,BuildContext context){
-    if(title=='language'){
-      return S.of(context).language;
-    }else if(title=='theme'){
-      return S.of(context).theme;
-    }else{
-      return S.of(context).about;
-    }
   }
 }

@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 
-import '../../../../generated/l10n.dart';
 import '../../../../utils/log_util.dart';
 import '../models/home_model.dart';
 
