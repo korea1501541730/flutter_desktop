@@ -21,22 +21,17 @@ class LanguageUtil{
     String? languageConfig = getAppLanguage();
     if(languageConfig!.isEmpty||languageConfig == AppStrings.followSystem){
       String systemLocale = window.locale.languageCode;
-      String? countryCode = window.locale.countryCode;
-      if (systemLocale == 'zh' || systemLocale == 'Hant' || countryCode == 'CN') {
-        print('繁体、简体默认简体');
+      if (systemLocale.startsWith('zh')) {
+        print('跟随系统当前系统繁体、简体默认简体');
         locale = const Locale('zh', 'CN');
-      } else {
-        // 其他语言
-        print('当前语言不是中文');
-        locale = const Locale('en', 'US');
       }
     }
     else if(languageConfig == AppStrings.chinese){
-      print('当前语言是中文');
+      print('当前选择语言是中文');
       locale = const Locale('zh', 'CN');
     }
     else if(languageConfig == AppStrings.english){
-      print('当前语言是英文');
+      print('当前选择语言是英文');
       locale = const Locale('en', 'US');
     }
     return locale;

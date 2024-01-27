@@ -37,17 +37,19 @@ class LanguageController extends GetxController {
     switch(index){
       case 0:
         languageConfig =  AppStrings.followSystem;
+        LanguageUtil.setAppLanguage(languageConfig);
         locale = LanguageUtil.getCurrentLocale();
         break;
       case 1:
         languageConfig = AppStrings.chinese;
+        LanguageUtil.setAppLanguage(languageConfig);
         locale = const Locale('zh', 'CN');
         break;
       case 2:
         languageConfig = AppStrings.english;
+        LanguageUtil.setAppLanguage(languageConfig);
         break;
     }
-    LanguageUtil.setAppLanguage(languageConfig);
     Get.updateLocale(locale);
     _updateDataSources(languageConfig);
   }

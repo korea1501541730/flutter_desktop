@@ -10,5 +10,8 @@ final Map<String, String> intlEnUs = {
   "about":"About",
   "english":"English",
   "chinese":"Chinese",
-  "followSystem":"Follow System"
+  "followSystem":"Follow System",
+  "cancel":"Cancel",
+  "light":"Light",
+  "dark":"Dark"
 };
